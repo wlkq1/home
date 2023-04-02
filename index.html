@@ -306,19 +306,10 @@
 							<hr>
 							
 							<h2>网易云音乐热门评论</h2>
-							<script src = "https://api.uomg.com/api/comments.163?format=text"></script>
-							<?php
-header("Content-Type:text/html;charset=UTF-8");
-date_default_timezone_set("PRC");
-$result = file_get_contents("https://api.uomg.com/api/comments.163?sort=热歌榜&format=json");
-$arr=json_decode($result,true);
-if ($arr['code']==1) {
-    //输出歌曲地址
-    echo $arr['data']['url'];
-} else {
-    echo $arr['msg'];
-}
-?>
+
+							<script src="https://api.uomg.com/api/comments.163?format=text"></script>
+							
+
 
 							
 							<hr>
@@ -326,6 +317,8 @@ if ($arr['code']==1) {
 							<h2>抖音音乐随机歌曲</h2>
 							
 							<p><a href="https://api.uomg.com/api/rand.music?sort=抖音榜&format=mp3">点偶播放~</a></p>
+							<br>
+							 <script src="https://api.uomg.com/api/rand.music?sort=抖音榜&format=mp3"></script>
 
 							<hr>
 							
